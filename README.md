@@ -11,6 +11,48 @@ authenticated user account.
 # webpack-express-boilerplate
 boilerplate taken from [webpack-express-boilerplate](https://github.com/christianalfoni/webpack-express-boilerplate) to get started with Webpack workflow in Node express and gain time in setup and hot reloading.
 
+## Folder Structure
+After creation, your project should look like this:
+
+```
+payfully-test/
+  README.md
+  Dockerfile
+  package.json
+  server.js
+  node_modules/
+  app/
+    actions/
+    containers/
+    reducers/
+    App.js
+    index.tpl.html
+    main.js
+  resources/
+    images/
+```
+
+For the project to build, **these files must exist with exact filenames**:
+
+* `app/index.tpl.html` is the page template;
+* `app/main.js` is the JavaScript entry point.
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.
+Open [http://localhost:3000/login](http://localhost:3000/login) to view it in the browser.
+
+The page will reload if you make edits.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
 ## Install and Running
 `git clone https://github.com/jvelezpo/payfully-test.git`
 
@@ -18,8 +60,6 @@ boilerplate taken from [webpack-express-boilerplate](https://github.com/christia
 2. npm install
 3. npm start
 4. navigate to http://localhost:3000/login
-
-
 
 ### Workflow
 
