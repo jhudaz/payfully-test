@@ -21,3 +21,9 @@ boilerplate taken from [webpack-express-boilerplate](https://github.com/christia
 4. navigate to http://localhost:3000/login
 
 ![login screen](./resources/images/login.png?raw=true "Login")
+
+![Search screen empty value](./resources/images/search-empty.png?raw=true "Search Empty")
+
+![Search screen](./resources/images/search.png?raw=true "Search")
+
+![Current screen](./resources/images/current.png?raw=true "Current")
