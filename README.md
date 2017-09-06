@@ -56,10 +56,20 @@ It correctly bundles React in production mode and optimizes the build for the be
 ## Install and Running
 `git clone https://github.com/jvelezpo/payfully-test.git`
 
-1. cd payfully-test
-2. npm install
-3. npm start
-4. navigate to http://localhost:3000/login
+```bash
+    $ cd payfully-test
+    $ npm install
+    $ npm start
+ ```
+##### navigate to http://localhost:3000/login`
+ 
+## Docker
+```bash
+    $ cd payfully-test
+    $ docker build -t payfully-test .
+    $ docker run -p 3000:3000 --name dockername-payfully-test payfully-test
+```
+##### navigate to `http://localhost:3000/login`
 
 ### Workflow
 
