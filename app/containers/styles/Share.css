@@ -1,0 +1,18 @@
+.topBuffer {
+    margin-top:20px; 
+}
+
+.btnSpotify {
+  background: #7ab800;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+  border-color: #3a5700;
+  color: white;
+}
+
+.btnSpotify:hover {
+  text-decoration: none;
+  color: white;
+}
