@@ -21,7 +21,7 @@ class App extends Component {
                 </Nav>
               </div>
             ) : (
-                <Nav pullRight>
+                <Nav>
                   <NavItem onClick={() => this.props.history.push('/login')}>Login</NavItem>
                 </Nav>
               )}
