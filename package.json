@@ -14,7 +14,8 @@
     "start": "node server",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors",
     "eslint": "eslint .",
-    "jscs": "jscs ."
+    "jscs": "jscs .",
+    "surge": "rm -rf dist && npm run build && cp dist/index.html dist/200.html && surge dist"
   },
   "dependencies": {
     "babel-cli": "^6.4.0",
