@@ -7,7 +7,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import { routerReducer, routerMiddleware } from 'react-router-redux'
-import { Route } from 'react-router'
 import reducers from './reducers/index'
 
 // Create a history of your choosing (we're using a browser history in this case)

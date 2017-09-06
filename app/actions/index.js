@@ -35,7 +35,7 @@ export function getUserCurrentPlayback() {
 }
 
 export function setSearchedTracks(searchterm, tracks) {
-  let data = {
+  const data = {
     searchterm,
     tracks
   }

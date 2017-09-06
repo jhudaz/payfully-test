@@ -16,9 +16,9 @@ const generateRandomString = N => (Math.random().toString(36)+Array(N).join('0')
 const scopes = ['user-read-private', 'user-read-email', 'user-read-playback-state'];
 const STATE_KEY = 'spotify_auth_state';
 const spotifyApi = new SpotifyWebApi({
-  clientId : '714a8d9305d34db59b9c0969cddbaa23',
-  clientSecret : '5d8940d3269a47bda0935c0f4566a5a9',
-  redirectUri : 'http://localhost:3000/callback'
+  clientId: '714a8d9305d34db59b9c0969cddbaa23',
+  clientSecret: '5d8940d3269a47bda0935c0f4566a5a9',
+  redirectUri: 'http://localhost:3000/callback'
 });
 
 app.get('/spotify_login', (_, res) => {
@@ -34,14 +34,14 @@ app.get('/callback', (req, res) => {
   const storedState = req.cookies ? req.cookies[STATE_KEY] : null;
 
   // first do state validation
-  if (state === null){//} || state !== storedState) {
+  if (state === null) {
     res.redirect('/error');
   // if the state is valid, get the authorization code and pass it on to the client
   } else {
     res.clearCookie(STATE_KEY);
     // Retrieve an access token and a refresh token
     spotifyApi.authorizationCodeGrant(code).then(data => {
-      const { expires_in, access_token, refresh_token } = data.body;
+      const { access_token, refresh_token } = data.body;
 
       // Set the access token on the API object to use it in later calls
       spotifyApi.setAccessToken(access_token);
@@ -82,8 +82,6 @@ if (isDeveloping) {
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 }
-
-
 
 app.listen(port, '0.0.0.0', function onStart(err) {
   if (err) {

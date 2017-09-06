@@ -11,7 +11,6 @@ import Error from './containers/Error'
 
 class App extends Component {
   render() {
-    { /* ConnectedRouter will use the store from Provider automatically */ }
     return (
       <ConnectedRouter history={this.props.history}>
         <div>
@@ -37,9 +36,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps)(App)
